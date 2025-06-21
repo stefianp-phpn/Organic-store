@@ -1,50 +1,83 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Organic Store</title>
-  <link rel="stylesheet" href="/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Store - Nasi Liwet & Makanan Sehat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-  
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EK9JZS8CV0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-EK9JZS8CV0');
-</script>
-  
 <body>
-  <section class="hero">
-    <!-- Logo di tengah atas -->
-    <div class="logo-container">
-      <img src="images/logo organik.png" alt="Organic Store Logo" class="logo" />
-      <img src="/images/daun palma.png" alt="Daun Kiri" class="leaf bottom-left">
-      <img src="/images/daun palma.png" alt="Daun Kanan" class="leaf bottom-right">
-    </div>
 
-    <div class="food-wrapper">
-    <img src="/images/palma besar.png" alt="Background Dekorasi" class="food-bg" />
-    </div>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">Organic Store</a>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="https://www.instagram.com/akunanda" target="_blank">About Us</a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=6282156818600&text=Halo%20Organic%20Store,%20saya%20ingin%20bertanya." target="_blank">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <div class="content">
-      <img src="images/nasi.png" alt="Nasi Komplit" class="food-image" />
-      <div class="text-area">
-        <h1 class="headline">Rasakan Kenikmatan<br>Menari di Lidahmu</h1>
-        <button class="shop-button">
-          <span>🛒</span>
-        </button>
-      </div>
-    </div>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Nikmati Kelezatan Nasi Liwet Organik</h1>
+                <p>Dibuat dari bahan-bahan segar pilihan langsung dari kebun kami. Pesan sekarang dan rasakan bedanya!</p>
+                <a href="https://api.whatsapp.com/send?phone=6282156818600&text=Halo,%20saya%20tertarik%20untuk%20memesan%20Nasi%20Liwet%20Anda." class="cta-button" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Pesan Sekarang
+                </a>
+            </div>
+        </section>
 
-    <div class="buttons">
-      <button class="btn about">About Us <span>👤</span></button>
-      <button class="btn contact">Contact Us <span>🟢</span></button>
-    </div>
-  </section>
+        <section id="menu">
+            <div class="container">
+                <h2>Menu Pilihan Kami</h2>
+                <div class="menu-container">
+                    <div class="menu-item">
+                        <img src="/aset/nasi liwet.jpeg" alt="Nasi Liwet Komplit">
+                        <h3>Nasi Liwet Komplit</h3>
+                        <p>Nasi liwet gurih dengan ayam suwir, telur, tahu, tempe, dan sambal khas.</p>
+                        <p class="price">Rp 35.000</p>
+                        <a href="https://api.whatsapp.com/send?phone=6282156818600&text=Halo,%20saya%20ingin%20memesan%20Nasi%20Liwet%20Komplit." class="buy-button" target="_blank">
+                            <i class="fas fa-shopping-cart"></i> Beli
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/aset/gado-gado.jpeg" alt="Gado-Gado Organik">
+                        <h3>Gado-Gado Organik</h3>
+                        <p>Sayuran organik segar disiram dengan saus kacang spesial yang lezat dan sehat.</p>
+                        <p class="price">Rp 25.000</p>
+                        <a href="https://api.whatsapp.com/send?phone=6282156818600&text=Halo,%20saya%20ingin%20memesan%20Gado-Gado%20Organik." class="buy-button" target="_blank">
+                            <i class="fas fa-shopping-cart"></i> Beli
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/aset/jus.jpeg" alt="Jus Sehat">
+                        <h3>Jus Sehat Mix</h3>
+                        <p>Campuran buah dan sayur organik untuk meningkatkan energi dan imunitas Anda.</p>
+                        <p class="price">Rp 20.000</p>
+                        <a href="https://api.whatsapp.com/send?phone=6282156818600&text=Halo,%20saya%20ingin%20memesan%20Jus%20Sehat%20Mix." class="buy-button" target="_blank">
+                            <i class="fas fa-shopping-cart"></i> Beli
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Organic Store. All Rights Reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>

@@ -1,142 +1,284 @@
+/* =================================
+   Reset dan Pengaturan Dasar
+   ================================= */
 * {
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #7fffd4;
-  overflow-x: hidden; /* Hapus scroll horizontal */
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-.hero {
-  padding: 40px;
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden; /* Hindari elemen absolute keluar */
-  background: linear-gradient(to bottom right, #7fffd4, #aaffcc);
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.content {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  max-width: 1100px; /* atur lebar maksimum konten */
-  margin: 0 auto;     /* agar tetap terpusat */
-  padding: 0 40px;    /* beri padding kanan kiri */
-
+/* =================================
+   Header dan Navigasi
+   ================================= */
+header {
+    background-color: #ffffff;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.food-image {
-  width: 650px;
-  max-width: 90%;
-  border-radius: 20px;
-  z-index: 1;
-}
-
-.food-wrapper {
-  position: relative;
-  width: fit-content;
-}
-
-.food-wrapper img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) translateY(100px)  translateX(200px) rotate(-45deg);;
-  z-index: 0; /* gambar latar */ 
-  width: 325px; /* sesuaikan besar background */
-}
-
-.food-image {
-  position: relative; /* agar di atas gambar bg */
-  z-index: 1;
-  width: 650px;
-  max-width: 90%;
-  border-radius: 20px;
-}
-
-
-.logo-container {
-  text-align: center;
-  margin-bottom: 30px;
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
-  width: 200px;
-  margin-bottom: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2E8B57; /* SeaGreen */
+    text-decoration: none;
 }
 
-.text-area {
-  max-width: 500px;
-  text-align: left;
+nav ul {
+    list-style: none;
+    display: flex;
 }
 
-.leaf {
-  position: absolute;
-  max-width: 200px;
-  opacity: 0.4;
-  z-index: 0;
-  pointer-events: none;
+nav ul li {
+    margin-left: 2rem;
 }
 
-.bottom-left {
-  left: -140px;
-  bottom: -100px;
-  transform: scaleX(-1);
-  width: 495px;
-  max-width: 60vw;
-  z-index: 2;
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-.bottom-right {
-  bottom: -150px;
-  right: -200px;
-  transform: scaleX(1);
-  width: 800px; /* diperbesar dari 200px ke 300px */
-  max-width: 60vw;
+nav ul li a:hover {
+    color: #2E8B57;
 }
 
-.headline {
-  color: #006400;
-  font-size: 33px;
-  font-weight: 700;
-  line-height: 1.4;
+/* =================================
+   Hero Section
+   ================================= */
+#hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('nasi-liwet-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
 }
 
-.shop-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #cfffbc;
-  border: 2px solid black;
-  border-radius: 15px;
-  font-size: 24px;
-  cursor: pointer;
-  transform: scaleX(-1)
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
-.buttons {
-  margin-top: 40px;
-  text-align: center;
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
 }
 
-.btn {
-  padding: 12px 24px;
-  margin: 10px;
-  font-size: 16px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-weight: 600;
+.cta-button {
+    background-color: #25D366; /* Warna WhatsApp */
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.about {
-  background-color: #a0c800;
-  color: white;
+.cta-button:hover {
+    background-color: #128C7E;
+    transform: translateY(-3px);
 }
 
-.contact {
-  background-color: #354f24;
-  color: white;
+.cta-button i {
+    margin-right: 10px;
+}
+
+/* =================================
+   Menu Section
+   ================================= */
+#menu {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+#menu h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2E8B57;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.menu-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding-bottom: 1.5rem;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-item h3 {
+    font-size: 1.4rem;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.menu-item p {
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.menu-item .price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2E8B57;
+    margin: 1rem 0;
+}
+
+.buy-button {
+    background-color: #2E8B57;
+    color: #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #20633E;
+}
+
+.buy-button i {
+    margin-right: 8px;
+}
+
+/* =================================
+   Footer
+   ================================= */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+
+/* ===================================================================
+   >>> KODE RESPONSIVE MENGGUNAKAN MEDIA QUERIES <<<
+   =================================================================== */
+
+/* Tampilan Tablet (lebar maksimal 768px) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Memberi lebih banyak ruang pada tablet */
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem; /* Perkecil font judul utama */
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    /* Ubah layout menu dari 3 kolom menjadi 2 kolom */
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Navigasi menjadi lebih sederhana */
+    header .container {
+        flex-direction: column; /* Susun logo dan navigasi secara vertikal */
+        gap: 0.5rem; /* Beri sedikit jarak antara logo dan nav */
+    }
+}
+
+
+/* Tampilan Mobile (lebar maksimal 600px) */
+@media (max-width: 600px) {
+    /* Perkecil lagi font di hero section agar tidak terlalu besar di ponsel */
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+    
+    #menu h2 {
+        font-size: 2rem;
+    }
+
+    /* Ubah layout menu dari 2 kolom menjadi 1 kolom */
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Atur ulang navigasi untuk layar yang sangat kecil */
+    nav ul {
+        flex-direction: column; /* Susun item navigasi secara vertikal */
+        align-items: center;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-top: 0.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block; /* Buat link memenuhi area li */
+        padding: 5px 0;
+    }
 }
